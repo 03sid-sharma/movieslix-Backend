@@ -1,3 +1,4 @@
 {
-    "jwtPrivateKey":"MoviesLix_jwtPrivateKey"
+    "jwtPrivateKey":"MoviesLix_jwtPrivateKey",
+    "db":"MoviesLix_db"
 }
