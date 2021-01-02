@@ -5,6 +5,7 @@ const mongoose=require('mongoose');
 const express=require('express');
 const router=express.Router();
 const Fawn=require('fawn'); 
+const validateObjectId = require("../middleware/validateObjectId");
 
 Fawn.init(mongoose);
 
@@ -52,7 +53,7 @@ router.post('/', async (req,res)=>{
     }
 });
 
-router.get('/:id',async (req,res)=>{
+router.get('/:id',validateObjectId,async (req,res)=>{
     const rental=await Rental.findById(req.params.id);
     
     if(!rental) return res.status(404).send('Rental not found!');
