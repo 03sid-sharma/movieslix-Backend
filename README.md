@@ -42,7 +42,7 @@ This will launch the Node server on port 3000. If that port is busy, you can set
 
 Open up your browser and head over to:
 
-http://localhost:3000/api/genres
+http://localhost:3900/api/genres
 
 You should see the list of genres. That confirms that you have set up everything successfully.
 

@@ -1,3 +1,4 @@
+const validateObjectId = require("../middleware/validateObjectId");
 const auth=require('../middleware/auth');
 const mongoose= require('mongoose');
 const { Movie,validate}= require('../models/movie');
@@ -10,7 +11,7 @@ router.get('/',async (req,res)=>{
     res.send(movies);
 });
 
-router.get('/:id',async (req,res)=>{
+router.get('/:id',validateObjectId,async (req,res)=>{
     const movie=await Movie.findById(req.params.id);
     
     if(!movie) return res.status(404).send('Sorry Movie not found!');

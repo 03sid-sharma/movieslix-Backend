@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --testEnvironment=node --verbose --coverage --forceExit --detectOpenHandles --maxWorkers=1",
     "clear_jest": "jest --clearCache",
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
   "engines": {
     "node": "12.18.2"    
