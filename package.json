@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --testEnvironment=node --verbose --coverage --forceExit --detectOpenHandles --maxWorkers=1",
+    "test": "jest --testEnvironment=node --verbose --coverage --forceExit --maxWorkers=1",
     "clear_jest": "jest --clearCache",
     "start": "node index.js"
   },

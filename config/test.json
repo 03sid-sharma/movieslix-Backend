@@ -1,4 +1,4 @@
 {
     "jwtPrivateKey":"1234",
-    "db":"mongodb://localhost/MoviesLix_tests"
+    "db":"mongodb://127.0.0.1:27017/MoviesLix_tests"
 }

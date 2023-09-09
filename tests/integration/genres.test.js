@@ -215,3 +215,7 @@ describe('/api/genres',()=>{
         });
     });
 });
+
+afterAll(async () => {
+  await mongoose.disconnect();
+});

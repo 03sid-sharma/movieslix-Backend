@@ -142,3 +142,7 @@ describe('api/returns',() => {
         );
     });
 });
+
+afterAll(async () => {
+    await mongoose.disconnect();
+});

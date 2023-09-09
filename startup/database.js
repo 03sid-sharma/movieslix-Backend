@@ -3,12 +3,15 @@ const mongoose=require('mongoose');
 const config=require('config');
 
 module.exports=function(){
-    const db=config.get('db');
-    mongoose.connect(db,{
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false
+  const db = config.get("db");
+  mongoose.connect(db, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useCreateIndex: true,
+      useFindAndModify: false,
     })
-    .then(()=>winston.info(`Connected to ${db}...`));
+    .then(() => winston.info(`Connected to ${db}...`))
+    .catch((err) => {
+      winston.error(`Error connecting to ${db}: ${err.message}`);
+    });
 }
